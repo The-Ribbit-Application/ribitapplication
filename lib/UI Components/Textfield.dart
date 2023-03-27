@@ -31,6 +31,8 @@ class Textfield extends StatelessWidget {
           fillColor: const Color(0xFF447604),
           filled: true,
           hintText: hintText,
+          hintStyle: const TextStyle(color: Color(0xFFCFE795))
+
 
         ),
       ),

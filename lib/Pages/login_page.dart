@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ribit/UI%20Components/SquareTile.dart';
 
 import '../UI Components/Textfield.dart';
+import '../UI Components/button.dart';
 
 class LoginPage extends StatelessWidget{
    LoginPage({super.key});
@@ -9,7 +11,10 @@ class LoginPage extends StatelessWidget{
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
+//SignUserIn method
+  void signUserIn(){
 
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +23,20 @@ class LoginPage extends StatelessWidget{
           body: SafeArea(
             child: Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children:  [
                   const SizedBox(height: 50),
                 //logo goes here
-                 const Icon(
-                      Icons.lock,
-                      size: 100,
+                 Image.asset(
+                     "lib/Images/img.png",
+                   height: 300,
+                 ),
+                  const Text('Great Grades are a hop away!',
+                    style: TextStyle(
+                        color: Color(0xFF447604),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold
+                    ),
                   ),
 
                   const SizedBox(height: 50),
@@ -49,12 +62,88 @@ class LoginPage extends StatelessWidget{
                     controller: passwordController,
                     hintText: "Password",
                     obscureText: true,
-                  )
-                //forgot password link
+                  ),
+                  const SizedBox(height: 25),
 
+                //forgot password link
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: const [
+                      Text(
+                        'Forgot Password?',
+                         style: TextStyle(color: Color(0xFF447604)),
+                      ),
+                    ],
+                  ),
+                ),
+                  const SizedBox(height: 25),
+                 button(
+                  onTap: signUserIn,
+                ),
+
+                  const SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0 ),
+                  child: Row(
+                    children: [
+                      Expanded(child:                     Divider(
+                        thickness: 1.0,
+                        color: Colors.grey[400],
+                      )),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.0 ),
+                        child: Text(
+                          "Or continue with",
+                          style: TextStyle(color: Colors.grey ),
+
+                        ),
+                      ),
+
+                      Expanded(child:                     Divider(
+                        thickness: 1.0,
+                        color: Colors.grey[400],
+                      ))
+
+                    ],
+                  ),
+                ),
                 //google sign in + apple sign in
+                  const SizedBox(height: 50),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      //google button
+                        SquareTile(imagePath: "lib/Images/google logo.png", imageHeight: 60),
+
+                      SizedBox(width: 50),
+
+                      //apple button
+                      SquareTile(imagePath: "lib/Images/apple logo.png", imageHeight: 60 )
+
+                    ],
+                  ),
 
                 //Don't have an account? Register Now
+                  const SizedBox(height: 50),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text("Don't have an account?"),
+                      SizedBox(width: 4),
+
+                      Text(
+                          "Sign up now!",
+                        style: TextStyle(
+                          color: Color(0xFF447604),
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+
+                    ],
+                  )
 
               ],
 
