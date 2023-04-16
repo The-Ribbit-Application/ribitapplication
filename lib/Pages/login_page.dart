@@ -3,6 +3,8 @@ import 'package:ribit/UI%20Components/SquareTile.dart';
 
 import '../UI Components/Textfield.dart';
 import '../UI Components/button.dart';
+import '../UI Components/timerbutton.dart';
+import '../UI Components/goback.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -77,7 +79,12 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 25),
               button(
-                onTap: signUserIn,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const buttonpage()),
+                  );
+                },
               ),
 
               const SizedBox(height: 50),
@@ -137,6 +144,88 @@ class LoginPage extends StatelessWidget {
                   ),
                 ],
               )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class buttonpage extends StatelessWidget {
+  const buttonpage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFCFE795),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Great Grades are a hop away!',
+                style: TextStyle(
+                    color: Color(0xFF447604),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+
+              const SizedBox(height: 200),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              ),
+
+              const SizedBox(height: 25),
+              timerbutton(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const timerpage()),
+                  );
+                },
+              ),
+
+              const SizedBox(height: 200),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              ),
+
+              const SizedBox(height: 25),
+              goback(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+
+  }
+}
+
+class timerpage extends StatelessWidget {
+  const timerpage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFCFE795),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+              const SizedBox(height: 25),
+              goback(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
             ],
           ),
         ),
