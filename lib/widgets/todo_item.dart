@@ -28,7 +28,7 @@ class ToDoItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-        tileColor: Colors.white,
+        tileColor: Color(0xFF447604),
         leading: Icon(
           todo.isDone ? Icons.check_box : Icons.check_box_outline_blank,
           color: tdBlue,
