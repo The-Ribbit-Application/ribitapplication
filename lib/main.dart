@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:ribit/Pages/login_page.dart';
-//import 'package:ribit/Pages/home_page.dart';
 
 void main() async {
   // initiate the hive
   await Hive.initFlutter();
-//change
+
   //open the  box
   var box = await Hive.openBox('mybox');
   runApp(const MyApp());
@@ -21,8 +20,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
-      //home: HomePage(),
-      //theme: ThemeData(primarySwatch: Colors.green),
     );
   }
 }
