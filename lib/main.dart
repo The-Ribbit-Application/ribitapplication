@@ -6,7 +6,7 @@ import 'package:ribit/Pages/login_page.dart';
 void main() async {
   // initiate the hive
   await Hive.initFlutter();
-
+//change
   //open the  box
   var box = await Hive.openBox('mybox');
   runApp(const MyApp());
