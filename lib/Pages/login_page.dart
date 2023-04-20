@@ -243,6 +243,7 @@ class timerpage extends StatelessWidget {
   }
 }
 
+// Owen's feature
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
 
@@ -285,9 +286,9 @@ class _HomeState extends State<Home> {
                           bottom: 20,
                         ),
                         child: Text(
-                          'All ToDos',
+                          'Task List',
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 45,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -322,7 +323,7 @@ class _HomeState extends State<Home> {
                     color: Colors.white,
                     boxShadow: const [
                       BoxShadow(
-                        color: Colors.grey,
+                        color: Colors.black,
                         offset: Offset(0.0, 0.0),
                         blurRadius: 10.0,
                         spreadRadius: 0.0,
@@ -333,7 +334,7 @@ class _HomeState extends State<Home> {
                   child: TextField(
                     controller: _todoController,
                     decoration: InputDecoration(
-                        hintText: 'Add a new todo item',
+                        hintText: 'Add a new task item',
                         border: InputBorder.none),
                   ),
                 ),
