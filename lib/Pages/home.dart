@@ -181,7 +181,8 @@ class _HomeState extends State<Home> {
           contentPadding: EdgeInsets.all(0),
           prefixIcon: Icon(
             Icons.search,
-            color: tdBlack,
+            color: Colors.black,
+            //color: tdBlack,
             size: 20,
           ),
           prefixIconConstraints: BoxConstraints(
@@ -203,7 +204,7 @@ class _HomeState extends State<Home> {
       title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Icon(
           Icons.menu,
-          color: tdBlack,
+          color: Colors.black,
           size: 30,
         ),
         Container(

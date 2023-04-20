@@ -11,23 +11,23 @@ class ToDo {
 
   static List<ToDo> todoList() {
     return [
-      ToDo(id: '01', todoText: 'Morning Excercise', isDone: true),
-      ToDo(id: '02', todoText: 'Buy Groceries', isDone: true),
+      ToDo(id: '01', todoText: 'Wake up', isDone: true),
+      ToDo(id: '02', todoText: 'Breath', isDone: true),
       ToDo(
         id: '03',
-        todoText: 'Check Emails',
+        todoText: 'Sleep more than 4+',
       ),
       ToDo(
         id: '04',
-        todoText: 'Team Meeting',
+        todoText: 'Drink water this time',
       ),
       ToDo(
         id: '05',
-        todoText: 'Work on mobile apps for 2 hour',
+        todoText: 'Go eat for once',
       ),
       ToDo(
         id: '06',
-        todoText: 'Dinner with Jenny',
+        todoText: 'Stop Procrasinating',
       ),
     ];
   }
