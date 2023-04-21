@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ribit/Pages/login_page.dart';
+import 'package:ribit/Pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-// Owen's Code:
