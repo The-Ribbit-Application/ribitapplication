@@ -1,6 +1,6 @@
 // this is Owen's feature:
 import 'package:flutter/material.dart';
-import 'package:ribit/Pages/util/todo_tile.dart';
+//import 'package:ribit/Pages/util/todo_tile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         title: Text('To Do'),
         elevation: 0,
       ),
-      body: ListView.builder(
+      /*body: ListView.builder(
             itemCount; toDoList.length,
             itemBuilder: (context, index){
               return ToDoTile(
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                 onChanged: (value) => checkBoxChanged(value, index),
           );
         },
-      ),
-    ),
+      ),*/
+    );
   }
 }

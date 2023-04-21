@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ribit/Pages/login_page.dart';
 
+import '../Pages/home.dart';
+
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -15,7 +17,7 @@ class MainPage extends StatelessWidget {
           if(snapshot.hasData){
             return Home();
           }else{
-            return LoginPage(showRegisterPage: () {  },);
+            return LoginPage();
           }
         },
       ),
